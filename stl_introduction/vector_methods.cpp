@@ -25,7 +25,7 @@ int main() {
     // sizing operations
     cout << "Size of a before resize: " << a.size() << endl;
     cout << "Capacity of a before resize: " << a.capacity() << endl;
-    a.resize(8); // resizes the vector
+    a.resize(8); // resizes the vector capacity
     cout << "Size of a after resize: " << a.size() << endl;
     cout << "Capacity of a after resize: " << a.capacity() << endl;
     cout << "Note: avoid resize" << endl;
