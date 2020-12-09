@@ -90,7 +90,7 @@ int main() {
         int n;
         cin>>n;
         ll primes[] = {2, 3, 5, 7, 11, 13, 17, 19}; // all primes less than 20
-        int primes_subsets_length = (1<<8); // 2 pow 8
+        int primes_subsets_length = (1<<8); // 2 pow 8, because 8 items in prime list.
         int final_result = 0;
         for(int i=1; i<=primes_subsets_length; i++) {
             int subset_divider = getSubsetDivider(i, primes);
