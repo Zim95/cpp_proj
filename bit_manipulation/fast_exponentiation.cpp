@@ -19,13 +19,32 @@ int power_optimized(int a, int n) {
     So each bit is multipled by power of 'a' times.
     The power of a doubles itself after every bit.
     */
-    int ans = 1;
+
+    /*
+    Example: 
+            a = 3
+            n = 5
+            => 3^5
+            => 3 ^ (101)
+            => 3 ^ (1 * 2^2 + 0 * 2^1 + 1*2^0)
+            => 3 ^ (1 * 2^2) * 3 ^ (0 * 2^1)  * 3 ^ (1 * 2 ^ 0) [By using the rule: a^(b+c) = a^b * a^c]----(i)
+            => (3 ^ 4) * (3 ^ 0) * (3 ^ 1)
+    */
+    int ans = 1; // Initially ans is 1, because you multiply with 2^0 which is 1.
     while(n>0){
         int last_bit = (n&1);
         if(last_bit==1) {
             ans = ans*a;
         }
-        a = a*a; // increment power of a.
+        a = a*a;
+        /*
+        increment power of a by 2.
+        a = 3 -> (3^1)
+        a = a * a = 3 * 3 = 9 -> (3^2)
+        a = a * a = 9 * 9 = 81 -> (3^4)
+        So, if the bit is 1, this power is multiplied to the cumulative answer.
+        Otherwise not.
+        */
         n = (n>>1);
     }
     return ans;

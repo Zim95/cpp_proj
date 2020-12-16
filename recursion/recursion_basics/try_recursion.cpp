@@ -66,6 +66,7 @@ int main() {
     cout << "Index of " << 30 << " is: " << binary_search(arr, 30) << endl;
     cout << "Index of " << 40 << " is: " << binary_search(arr, 40) << endl;
     cout << "Index of " << 50 << " is: " << binary_search(arr, 50) << endl;
+    cout << "Index of " << 1 << " is: " << binary_search(arr, 1) << endl;
 
     // find power recursively
     cout << "power(5, 4) = " << power_recursive(5, 4) << endl;
