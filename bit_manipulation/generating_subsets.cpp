@@ -27,7 +27,7 @@ int main() {
     */
     string input;
     getline(cin, input);
-    int total_subsets = pow(2, input.length());
+    int total_subsets = pow(2, input.length()); // for n ->3, we have 8 combinations.
     cout << total_subsets << endl;
     for (int i=0; i<total_subsets; i++) {
         cout << "Subset for " << i << " = " << generateSubstringFromN(i, "abc") << endl;
