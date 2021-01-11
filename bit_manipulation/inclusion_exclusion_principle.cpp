@@ -52,6 +52,34 @@ So, that is the difference.
 How many numbers between 1 and n are divisible by prime numbers between 1 and 20
 Solution steps:
 1. We need to get the subset divider. i.e. the denominator formed by each subset.
+    The denominator is determined by using bitmasking.
+    remember? if we have abc then the subsets are:
+    000 - '___'
+    001 - '__c'
+    010 - '_b_'
+    011 - '_bc'
+    100 - 'a__'
+    101 - 'a_c'
+    110 - 'ab_'
+    111 - 'abc'
+    So we are going to do the same thing for our subsets.
+    We have 8 primes in our prime set. We will get 2 pow 8 subsets.
+    Meaning
+    00000000
+    00000001
+    00000010
+    ....
+    And so on
+    Each of which will create a subset of primes.
+    E.g. 0000001 - _,_,_,_,_,_,_,19
+         0000010 - _,_,_,_,_,_,17,_
+    Our denominator will be the product of the subset generated.
+    Then if there are odd numbers in the subset, turn it negative.
+    Otherwise, keep it positive.
+    
+    The number of elements in the subset is determined by the number of
+    1s in the bits. So we count the number of 1s and if that is odd we multiply
+    the result by -1.
 2. We need to then divide n by the denominator.
 3. If the count of the subset is odd then we add the result, else we subtract the result.
 */
