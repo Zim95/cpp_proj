@@ -1,12 +1,27 @@
-// Merge sort
+/*
+    INVERSION COUNT
+    ---------------
+    Given an array:
+    int a[] = {1, 5, 2, 6, 3, 0, 2};
+    Find all pairs such that,
+    a[i] > a[j], for all i<j.
+
+    You see its inverted. As according to sorting, if i<j, a[i]<a[j].
+*/
 #include <iostream>
 
 using namespace std;
 
 int inversionCountMergeSort(int *a, int s, int e) {
+    // Base case
+    if(s>=e) {
+        // End of array return 0 inversions.
+        return 0;
+    }
     
 }
 
+// Brute force technique
 int inversionCountBruteForce(int *a, int n) {
     int inversion_count = 0;
     for(int i=0; i<n; i++) {
