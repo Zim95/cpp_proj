@@ -4,6 +4,7 @@
     If you find a particular range,
     Update all of its child nodes.
     Meaning, update each leaf node and build the tree up from there.
+    Time complexity is O(N) in worst case, if we update the whole array.
 */
 #include<iostream>
 #include<climits>
