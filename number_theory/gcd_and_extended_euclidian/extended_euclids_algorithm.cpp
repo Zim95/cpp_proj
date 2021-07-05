@@ -78,7 +78,6 @@ void extended_euclidian(int a, int b) {
     y = cy;
 }
 
-
 int main() {
     int a=18;
     int b=30;
